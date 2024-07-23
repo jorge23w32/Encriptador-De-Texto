@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="icon" href="./img/logo.ico" />
+    <link rel="stylesheet" href="./styles/estilos.css" />
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <img class="logoEncabezado" src="./img/aurora.png" alt="Logo de Aurora Latam">
+        <h1 class="tituloEncabezado">Encriptador de Texto</h1>
+    </header>
+
+    <!-- Contenedor para Textarea, advertencia, botones y secciones -->
+    <div class="contenedorPadre">
+        <!-- Contenedor para Textarea, advertencia y botones -->
+        <div class="contenedorUsuario">
+            <textarea class="textoDelUsuario" id="textoUsuario" placeholder="Escribe tu texto..."></textarea>
+            <!-- Div para el icono y la advertencia-->
+            <div class="contenedorAdvertencia">
+                <img class="iconoAdvertencia" src="./img/informacion.png" alt="Icono de Informacion">
+                <p class="textoAdvertencia">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <!-- Contenedor para los botones-->
+            <div class="contenedorBotones">
+                <button class="botonEncriptar" id="botonEncriptar" onclick="encriptarTexto()">Encriptar</button>
+                <button class="botonDesencriptar" id="botonDesencriptar" onclick="desencriptarTexto()">Desencriptar</button>
+            </div>
+        </div>
+
+        <!-- Contenedor para secciones, sinResultado y conResultado -->
+        <div class="contenedorSecciones">
+            <!-- Contenedor para la seccion sinResultado-->
+            <div class="sinResultado" id="sinResultado">
+                <img class="imagenBuscando" src="./img/personaBuscando.png" />
+                <p class="textoSinResultadoNegritas">Ningún mensaje fue encontrado</p>
+                <p class="textoSinResultado">
+                    Ingresa el texto que desees encriptar o desencriptar.
+                </p>
+            </div>
+            <!-- Contenedor para la seccion conResultado-->
+            <div class="conResultado" id="conResultado">
+                <textarea class="textoConResultado" id="textoResultado">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, laudantium ipsam? Eveniet, excepturi dicta? Dolor unde, quia nulla, provident odio facere autem, molestiae ullam dolorum velit voluptatibus quam incidunt in.</textarea>
+                <button class="botonCopiar" id="botonCopiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/funciones.js"></script>
+</body>
+</html>
